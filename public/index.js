@@ -72,7 +72,7 @@ function initBotConversation() {
     });
     startChat(user, botConnection);   
 
-    botConnection.postActivity({
+    /* botConnection.postActivity({
         type: "invoke",
         value: {
             trigger: "covid19_metrics",
@@ -81,7 +81,7 @@ function initBotConversation() {
             }
         },
         from: user,
-        name: "TriggerScenario"}).subscribe(function (id) {});
+        name: "TriggerScenario"}).subscribe(function (id) {}); */
 
 
     /* var shellInput = document.querySelector(".wc-console.has-upload-button");
