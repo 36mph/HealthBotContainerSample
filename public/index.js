@@ -113,15 +113,20 @@ function initBotConversation() {
 }
 
 function startChat(user, botConnection) {
+    const botUser = {
+        id: 'bot1234',
+        name: 'mybotnamehere'
+    };
+
     const botContainer = document.getElementById('botContainer');
     botContainer.classList.add("wc-display");
 
     BotChat.App({
         botConnection: botConnection,
         user: user,
+        bot: botUser,
         locale: 'en',
-        resize: 'detect',
-        botAvatarInitials: 'My Bot'
+        resize: 'detect'
         // sendTyping: true,    // defaults to false. set to true to send 'typing' activities to bot (and other users) when user is typing
     }, botContainer);
 }
