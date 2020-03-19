@@ -120,7 +120,8 @@ function startChat(user, botConnection) {
         botConnection: botConnection,
         user: user,
         locale: 'en',
-        resize: 'detect'
+        resize: 'detect',
+        botAvatarInitials: 'My Bot'
         // sendTyping: true,    // defaults to false. set to true to send 'typing' activities to bot (and other users) when user is typing
     }, botContainer);
 }
