@@ -3,8 +3,8 @@ function requestChatBot(loc) {
     const oReq = new XMLHttpRequest();
     oReq.addEventListener("load", initBotConversation);
     var path = "/chatBot?";
-    if (params['userId']) {
-        path += "&userId=" + params['userId'];
+    if (params.has('userId')) {
+        path += "&userId=" + params.get('userId');
     }
     if (loc) {
         path += "&lat=" + loc.lat + "&long=" + loc.long;
@@ -15,8 +15,7 @@ function requestChatBot(loc) {
 
 function chatRequested() {
     const params = new URLSearchParams(location.search);
-    var shareLocation = params["shareLocation"];
-    if (shareLocation) {
+    if (params.has('shareLocation')) {
         getUserLocation(requestChatBot);
     }
     else {
