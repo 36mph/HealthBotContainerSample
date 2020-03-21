@@ -84,7 +84,7 @@ function initBotConversation() {
             */
 
             // Use the following activity to proactively invoke a bot scenario
-            /*
+            
             dispatch({
                 type: 'DIRECT_LINE/POST_ACTIVITY',
                 meta: {method: 'keyboard'},
@@ -97,8 +97,7 @@ function initBotConversation() {
                         }
                     }
                 }
-            });
-            */
+            });            
             
         }
         return next(action);
